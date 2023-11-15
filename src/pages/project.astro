@@ -1,0 +1,124 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 660px;
+			}
+			ul {
+				display:flex;
+				flex-direction: column;
+				gap: 2rem;
+				list-style-type: none;
+				margin: 100px 0 0 0;
+				padding: 0;
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li a {
+				display: block;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--white));
+				line-height: 1;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
+			ul li a:hover h4,
+			ul li a:hover .date {
+				color: rgb(var(--accent));
+			}
+			@media (max-width: 720px) {
+				ul {
+					gap: 0.5em;
+				}
+				ul li {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body transition:animate="fade">
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Projeler</h1>
+			<p>
+				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+				template serves as a lightweight, minimally-styled starting point for anyone looking to
+				build a personal website, blog, or portfolio with Astro.
+			</p>
+			<section>
+				<ul>
+					<li>
+						<a href="blog">
+							<h4 class="title">📌 dailyread</h4>
+							<p class="date">
+								Yapay zeka destekli ingilizce öğrenme uygulaması
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="github-insight.vercel.app">
+							<h4 class="title">📌 Github Insight</h4>
+							<p class="date">
+								Explore Your GitHub - Analyze, Refine, and Boost Your Github Account. 
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://choose-the-right.vercel.app/">
+							<h4 class="title">📌 Github Insight</h4>
+							<p class="date">
+								A color guessing game that is very simple to play.
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://equalization-game.vercel.app/">
+							<h4 class="title">📌 Sayıları Eşitleme Oyunu</h4>
+							<p class="date">
+								The goal of the equalize numbers game is to make all the numbers in the matrix the same. 
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://arti-eksi-oyunu.vercel.app/">
+							<h4 class="title">📌 plus-minus-game</h4>
+							<p class="date">
+								Explore Your GitHub - Analyze, Refine, and Boost Your Github Account. 
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://arti-eksi-oyunu.vercel.app/">
+							<h4 class="title">📌 Paper Katlama Oyunu</h4>
+							<p class="date">
+								Explore Your GitHub - Analyze, Refine, and Boost Your Github Account. 
+							</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
