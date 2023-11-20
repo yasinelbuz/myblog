@@ -2,123 +2,42 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 660px;
-			}
-			ul {
-				display:flex;
-				flex-direction: column;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 100px 0 0 0;
-				padding: 0;
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--white));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-			}
-		</style>
-	</head>
-	<body transition:animate="fade">
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>Projeler</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			<section>
-				<ul>
-					<li>
-						<a href="blog">
-							<h4 class="title">📌 dailyread</h4>
-							<p class="date">
-								Yapay zeka destekli ingilizce öğrenme uygulaması
-							</p>
-						</a>
-					</li>
+<DefaultLayout>
+	<section class="w-full md:w-2/3 mx-auto p-[50px] md:p-[100px]">
+		<h1></h1>
+		<h1 class="text-5xl font-bold mb-6">Projeler</h1>
 
-					<li>
-						<a href="github-insight.vercel.app">
-							<h4 class="title">📌 Github Insight</h4>
-							<p class="date">
-								Explore Your GitHub - Analyze, Refine, and Boost Your Github Account. 
-							</p>
-						</a>
-					</li>
+		<p>
+			<a href="https://dailyread.net" class="text-blue-500 underline" target="blank">Dailyread</a> - Yapay zeka ile yazılmış günde bir tane makale sunan, dil öğrenme ve okuma alışkanlığı kazandırmak için hedeflenmiş bir web uygulaması. 
+			<div class="text-black/50 text-sm">Teknolojiler: react, zustand, tailwindcss, framer-motion, openai, supabase, langchain, react-hook-form, usehooks-ts</div>
+		</p>
+		<br />
 
-					<li>
-						<a href="https://choose-the-right.vercel.app/">
-							<h4 class="title">📌 Github Insight</h4>
-							<p class="date">
-								A color guessing game that is very simple to play.
-							</p>
-						</a>
-					</li>
+		<p>
+			<a href="https://github-insight.vercel.app/" class="text-blue-500 underline" target="blank">Github Insight</a> - Github profillerinin detaylı analizni çıkaran bir web uygulaması.  
+			<div class="text-black/50 text-sm">Teknolojiler: react, redux, sass, github-api, nextjs, fusioncharts, react-icons, redux-toolkit </div>
+		</p>
+		<br />
 
-					<li>
-						<a href="https://equalization-game.vercel.app/">
-							<h4 class="title">📌 Sayıları Eşitleme Oyunu</h4>
-							<p class="date">
-								The goal of the equalize numbers game is to make all the numbers in the matrix the same. 
-							</p>
-						</a>
-					</li>
+		<p>
+			<a href="https://equalization-game.vercel.app/" class="text-blue-500 underline" target="blank">Equalization Game</a> - fikri bana ait olan matrixdeki sayıları eşitleme oyundur. Çözümü hala ispatlanmamıştır. Bitirmek mümkün olmayabilir. Hala üzerine düşünüyorum.  
+			<div class="text-black/50 text-sm">Teknolojiler: react, react-icons, react-i18next, tailwindcss</div>
+		</p>
+		<br />
 
-					<li>
-						<a href="https://arti-eksi-oyunu.vercel.app/">
-							<h4 class="title">📌 plus-minus-game</h4>
-							<p class="date">
-								Explore Your GitHub - Analyze, Refine, and Boost Your Github Account. 
-							</p>
-						</a>
-					</li>
+		<p>
+			<a href="https://choose-the-right.vercel.app/" class="text-blue-500 underline" target="blank">Choose the Right Game </a> - Oynaması çok basit bir renk tahmin oyunu. Dört renkten birine tıklamanız gerekiyor. Bunlardan üçü doğru, biri yanlıştır.  
+		</p>
+		<br />
 
-					<li>
-						<a href="https://arti-eksi-oyunu.vercel.app/">
-							<h4 class="title">📌 Paper Katlama Oyunu</h4>
-							<p class="date">
-								Explore Your GitHub - Analyze, Refine, and Boost Your Github Account. 
-							</p>
-						</a>
-					</li>
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+		<p>
+			<a href="https://arti-eksi-oyunu.vercel.app/" class="text-blue-500 underline" target="blank">Artı Eksi Oyunu</a> - Arkadaşımın isteği üzerine yaptığım, zihninizi ufaktan çalıştıracak keyifli bir oyun.    
+		</p>
+		<br />
+	</section>
+	
+</DefaultLayout>

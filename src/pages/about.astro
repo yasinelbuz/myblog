@@ -1,0 +1,55 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+
+
+<!doctype html>
+<html lang="en" transition:animate="fade">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.home-img{
+				display:flex;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main class="md:p-[100px] p-[50px] flex gap-6 md:flex-row flex-col">
+			<img src="me.jpg" class="md:w-1/2 w-full" />
+			<section class="md:w-1/2 w-full">
+				<h1 class="text-5xl font-bold mb-6">Selam, Ben Yasin 👋</h1>
+				<p>
+					Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+					template serves as a lightweight, minimally-styled starting point for anyone looking to
+					build a personal website, blog, or portfolio with Astro.
+				</p>
+				<br />
+				<p>
+					Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+					template serves as a lightweight, minimally-styled starting point for anyone looking to
+					build a personal website, blog, or portfolio with Astro.
+				</p>
+				<br />
+				<p>
+					Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+					template serves as a lightweight, minimally-styled starting point for anyone looking to
+					build a personal website, blog, or portfolio with Astro.
+				</p>
+				<br />
+				<p>
+					Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
+					template serves as a lightweight, minimally-styled starting point for anyone looking to
+					build a personal website, blog, or portfolio with Astro.
+				</p>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>

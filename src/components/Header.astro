@@ -1,58 +1,21 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Hakkımda</HeaderLink>
-			<HeaderLink href="/blog">Yazılar</HeaderLink>
-			<HeaderLink href="/project">Projeler</HeaderLink>
-		</div>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.2em;
-		border:1px solid #efefef1e;
-		border-radius:5px;
-		padding:5px;
-	}
+<header class="text-gray-600 flex flex-wrap p-5 flex-col md:flex-row items-center">
+	<h2 class="flex items-end gap-2">
+		<a href="/" class="text-xl">
+		<span>{SITE_TITLE}</span>
+		<span class="text-gray-500/50"> - Yazılım Geliştiricisi</span>
+		</a>
+	</h2>
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		color:var(--accent)
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>
+    <nav class="md:ml-auto flex flex-wrap gap-2 items-center text-base justify-center">
+      	<a href="/">Ev</a>
+		<a href="/about">Hakkımda</a>
+		<a href="/project">Projeler</a>
+    </nav>
+</header>

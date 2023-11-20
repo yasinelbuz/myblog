@@ -1,40 +1,38 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
 ---
 
-
-
-<!doctype html>
-<html lang="en" transition:animate="fade">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.home-img{
-				display:flex;
-				justify-content: center;
+<DefaultLayout>
+	<section class="md:p-[100px] p-[50px]">
+		<h1 class="text-3xl font-bold mb-6">Blog Yazıları</h1>
+		<ul class="">
+			{
+				posts.map((post) => (
+					<li class="mb-10">
+						<a href={`/blog/${post.slug}/`} class="group flex gap-6 md:flex-row flex-col">
+							<img src={post.data.heroImage} class="md:min-w-[30%] md:max-w-[30%] w-full"/>
+							<div class="flex flex-col gap-2">
+								<h4 class="group-hover:text-yellow-500 text-black text-3xl font-bold">{post.data.title}</h4>
+								<p class="text-gray-900">
+									<FormattedDate date={post.data.pubDate} />
+								</p>
+								<p class="text-gray-600">
+									{post.data.description}
+								</p>
+								Devam...
+							</div>
+						</a>
+					</li>
+				))
 			}
-		</style>
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>Selam, Ben Yasin</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			
-		</main>
-		<div class="home-img">
-			<img src="/homepage.jpg" />
-		</div>
-
-		<Footer />
-	</body>
-</html>
+		</ul>
+	</section>
+</DefaultLayout>
 
 
