@@ -1,7 +1,7 @@
 ---
 title: 'Üç Silahşörler — Video, Dokümantasyon ve Pratik.'
 description: 'Yazılım, bir öğrenme serüveni, hergün yeni bişeyler öğreneceksiniz, bişeyler inşa edeceksiniz. Hata yapacaksınız, yeni insanlar tanıyacaksınız ve tabiki birilerinin hayatına dokunacaksınız.'
-pubDate: 'Jul 08 2022'
+pubDate: 'Jul 08 2023'
 heroImage: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Ym9va3xlbnwwfHwwfHx8MA%3D%3D'
 ---
 
