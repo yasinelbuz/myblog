@@ -1,59 +1,43 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../components/layout.astro';
 ---
 
 
 
-<!doctype html>
-<html lang="en" transition:animate="fade">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.home-img{
-				display:flex;
-				justify-content: center;
-			}
-		</style>
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main class="md:p-[100px] p-[50px] flex gap-6 md:flex-row flex-col items-start">
-			<img src="me.jpg" class="md:w-1/2 w-full" />
-			<section class="md:w-1/2 w-full">
-				<h1 class="text-3xl font-bold mb-6">Selam, Ben Yasin 👋</h1>
-				<p>
-					İstanbul'da yaşayan, Javascript ekosistemi ile ilgilenen bir yazılım geliştiricisiyim.
-					Günlerim yazılımda bişeyler öğrenerek, kendi projelerime ve açık kaynak projelerine katkı sağlayarak geçmektedir. 
-				</p>
-				<br />
-				<p>
-					Bahçeşehir Üniversite'sinden Bilgisayar Öğretmeni mezunuyum, kısa bir dönem öğretmenlik tecrübem var ve bir dönem çocuklara Javascript dersleri anlatarak onların mantıksal zekasını geliştirmek için dersler anlattım. 
-				</p>
-				<br />
-				<p>
-					Gezmeyi, etkinliklere katılmayı ve yeni insanlar ile tanışmayı çok seviyorum. Düzenli olarak yaz kış demeden yürüşler yapıyorum. Bir gitarım var ve bana küstüğüne eminim, gönlünü alacağım. 
-				</p>
-				<br />
-				<p>
-					Son olarak, web platformlarında bişeyler tasarlamayı çok seviyorum, gelecekte ise web platformlarında bişeyler inşa etmeyi devam edeceğimi düşünüyorum. Eğer benimle tanışmak ve soru sormak isterseniz lütfen çekinmeyin, cevap vereceğimden emin olabilirsiniz.
-				</p><br />
-				<p>
-					Kendinize çok iyi bakın, görüşmek üzere.<br />
-					🚴🏼
-				</p><br />
-				<p>
-					    <a href="https://twitter.com/yasinelbuz" target="blank" class="text-blue-400 underline">Twitter @yasinelbuz</a><br />
-						<a href="https://github.com/yasinelbuz/" target="blank" class="text-blue-400 underline">Github @yasinelbuz</a><br />
-						<a href="https://www.linkedin.com/in/yasin-elb%C3%BCz-314b8b4b/" target="blank" class="text-blue-400 underline">LinkedIn @yasinelbuz</a><br />
-						<a href="https://www.instagram.com/yasinelbuz/" target="blank" class="text-blue-400 underline">Instagram @yasinelbuz</a><br />
-						<a href="https://medium.com/@handbuz" target="blank" class="text-blue-400 underline">Medium @yasinelbuz</a><br />
-				</p>
-			</section>
-		</main>
+<Layout>
+	<section class="leading-[160%]">
+		<h1 class="text-3xl mb-4">Selam, Ben Yasin 👋</h1>
+		<p>
+			İstanbul'da yaşayan, Javascript ekosistemi ile ilgilenen bir yazılım geliştiricisiyim.
+			Günlerim yazılım da bişeyler öğrenerek, kendi projelerime ve açık kaynak projelere katkı sağlayarak geçmektedir. 
+		</p>
+		<br />
+		<p>
+			Bahçeşehir Üniversite'sinden Bilgisayar Öğretmeni mezunuyum, kısa bir dönem öğretmenlik tecrübem var ve bir dönem çocuklara Javascript dersleri anlatarak onların mantıksal zekasını geliştirmek için dersler anlattım. 
+		</p>
+		<br />
+		<p>
+			Gezmeyi, etkinliklere katılmayı ve yeni insanlar ile tanışmayı çok seviyorum. Düzenli olarak yaz kış demeden yürüşler yapıyorum. 
+		</p>
+		<br />
+		<p>
+			Son olarak, web platformlarında bişeyler tasarlamayı çok seviyorum, gelecekte ise web platformlarında bişeyler inşa etmeyi devam edeceğimi düşünüyorum. Eğer benimle tanışmak ve soru sormak isterseniz lütfen çekinmeyin, cevap vereceğimden emin olabilirsiniz.
+		</p><br />
+		<p>
+			Kendinize çok iyi bakın, görüşmek üzere.<br />
+			🚴🏼
+		</p>
+		<br />
+		<p>
+				<a href="https://twitter.com/yasinelbuz" target="blank" class="text-blue-500 underline">Twitter @yasinelbuz</a><br />
+				<a href="https://github.com/yasinelbuz/" target="blank" class="text-blue-500 underline">Github @yasinelbuz</a><br />
+				<a href="https://www.linkedin.com/in/yasin-elb%C3%BCz-314b8b4b/" target="blank" class="text-blue-500 underline">LinkedIn @yasinelbuz</a><br />
+				<a href="https://www.instagram.com/yasinelbuz/" target="blank" class="text-blue-500 underline">Instagram @yasinelbuz</a><br />
+				<a href="https://medium.com/@handbuz" target="blank" class="text-blue-500 underline">Medium @yasinelbuz</a><br />
+		</p>
+	</section>
+</Layout>
 
-		<Footer />
-	</body>
-</html>
+<div class="flex justify-center mb-8">
+	<img src="public/me.jpg" />
+</div>
