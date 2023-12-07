@@ -1,8 +1,7 @@
 ---
 import Layout from '../components/layout.astro';
+import MePhoto from '../assets/me.jpg'
 ---
-
-
 
 <Layout>
 	<section class="leading-[160%]">
@@ -28,16 +27,17 @@ import Layout from '../components/layout.astro';
 			🚴🏼
 		</p>
 		<br />
-		<p>
-				<a href="https://twitter.com/yasinelbuz" target="blank" class="text-blue-500 underline">Twitter @yasinelbuz</a><br />
-				<a href="https://github.com/yasinelbuz/" target="blank" class="text-blue-500 underline">Github @yasinelbuz</a><br />
-				<a href="https://www.linkedin.com/in/yasin-elb%C3%BCz-314b8b4b/" target="blank" class="text-blue-500 underline">LinkedIn @yasinelbuz</a><br />
-				<a href="https://www.instagram.com/yasinelbuz/" target="blank" class="text-blue-500 underline">Instagram @yasinelbuz</a><br />
-				<a href="https://medium.com/@handbuz" target="blank" class="text-blue-500 underline">Medium @yasinelbuz</a><br />
-		</p>
+		<h1 class="text-xl mb-4 mt-12">İletişim</h1>
+		<ul class="list-disc list-inside flex flex-col gap-1">
+			<li>E-posta ile iletişime geçmek isterseniz<a href="mailto:yasinelbuz@gmail.com" target="blank" class="text-blue-500 underline"> yasinelbuz@gmail.com</a> mail atabilirsiniz.</li>
+			<li>Güncel tweet'lerim için beni <a href="https://twitter.com/yasinelbuz" target="blank" class="text-blue-500 underline"> Twitter'da</a> takip edin.</li>
+			<li>Kod projelerimi incelemek ve paylaşımlarıma göz atmak için <a href="https://github.com/yasinelbuz/" target="blank" class="text-blue-500 underline"> Github profilimi</a> ziyaret edin.</li>
+			<li>Profesyonel kariyerim hakkında daha fazla bilgi için<a href="https://www.linkedin.com/in/yasin-elb%C3%BCz-314b8b4b/" target="blank" class="text-blue-500 underline"> LinkedIn profilimi </a>ziyaret edin.</li>
+			<li>Görsel paylaşımlarım ve günlük hayatımdan kesitler için<a href="https://www.instagram.com/yasinelbuz/" target="blank" class="text-blue-500 underline"> Instagram hesabımı</a> takip edin.</li>
+		</ul>
 	</section>
 </Layout>
 
 <div class="flex justify-center mb-8">
-	<img src="me.jpg" />
+	<img src={(MePhoto.src)} />
 </div>
