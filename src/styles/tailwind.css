@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.active {
+    color: white;
+}
+
+h1 {
+    font-weight: 600;
+    color: white;
+    font-size: 28px;
+}
 body {
-    @apply bg-black/90 text-white/80
+    font-family: 'Inter', sans-serif;
+        letter-spacing: 0.01rem;
+        -moz-osx-font-smoothing: grayscale;
+    
+        @apply bg-black/90 text-white/80 text-[16px]
 }

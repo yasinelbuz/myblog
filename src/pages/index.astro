@@ -12,9 +12,12 @@ const posts = (await getCollection('blog')).sort(
 
 <Layout>
     <div>
-        <h1 class="text-3xl mb-4">Yazılar </h1>
+        <h1>Yazılar </h1>
+        <p class="mb-8 font-light">Merhaba, bloguma hoş geldiniz! Blogumda çeşitli konularda yazılarımı paylaşıyorum. Javascript dünyasından, deneyimlerimden ve belki de bazen sıradan görünen anılar bulacaksınız...</p>
+        <ul class="list-disc list-inside flex flex-col gap-2">
         {posts.map(item => {
-            return <a href={`/blog/${item.slug}/`} class="block mb-2 hover:underline text-blue-500">{item.data.title}</a>
+            return  <li><a href={`/blog/${item.slug}/`} class="hover:text-white text-white/80 font-bold">{item.data.title}</a></li>
         })}
+        </ul>
     </div>
 </Layout>
