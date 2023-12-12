@@ -18,7 +18,7 @@ Neden pembe bisiklet aldınız diye aileme sorduğumda, tek o kalmıştı dedile
 pembe bisikletimi bulamadım, bir çocukluk fotoğrafı bırakayım. ❤️
 <br />
 <br />
-<img src="/public/kucuk-ben.jpg">
+<img src="/kucuk-ben.jpg">
 
 
 
