@@ -20,7 +20,7 @@ const { Content } = await post.render();
 
 <Layout>
 	<div>
-		<h1 class="text-6xl leading-[140%] text-center md:text-left">{post.data.title}</h1>
+		<h1 class="text-6xl leading-[140%]">{post.data.title}</h1>
 		<FormattedDate date={post.data.pubDate} />
 		<img src={post.data.heroImage} class="w-full my-8"/>
 		
