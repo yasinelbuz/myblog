@@ -16,5 +16,5 @@ body {
         letter-spacing: 0.01rem;
         -moz-osx-font-smoothing: grayscale;
     
-        @apply bg-black/90 text-white/80 text-[16px]
+        @apply bg-black text-white/80 text-[16px]
 }
