@@ -1,0 +1,63 @@
+---
+import Layout from "../components/layout.astro";
+
+const response = await fetch('https://api.raindrop.io/rest/v1/raindrops/25679431',{
+  headers: {
+    "Authorization": "Bearer db451270-4a12-42ef-9ce9-b7906f6cf98b",
+    "Content-Type": "application/json"
+  },
+});
+
+const projects = await response.json();
+---
+
+<Layout>
+  <section>
+    <h1>Projeler ✨</h1>
+    <p class="mb-8 font-light">Projelerimin bazılarını aşağıda görebilirsiniz.</p>
+    {projects.result && projects.items.length > 0 && (
+      <div>
+        {/* Ayları grupla */}
+        {Object.entries(
+          projects.items.reduce((acc, item) => {
+            const date = new Date(item.created);
+            const monthYear = date.toLocaleString('tr-TR', { month: 'long', year: 'numeric' });
+            if (!acc[monthYear]) acc[monthYear] = [];
+            acc[monthYear].push(item);
+            return acc;
+          }, {})
+        ).map(([monthYear, items]) => (
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">{monthYear}</h2>
+            <div class="space-y-4">
+              {(items as any[]).map((item) => (
+                <div class="flex gap-4 items-start">
+                  {item.cover && (
+                    <img 
+                      src={item.cover} 
+                      alt={item.title.length > 30 ? item.title.substring(0, 30) + '...' : item.title}
+                      class="w-20 h-20 object-cover rounded aspect-square"
+                    />
+                  )}
+                  <div>
+                    <a
+                      href={item.link}
+                      class="text-lg hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.title}
+                    </a>
+                    {item.excerpt && (
+                      <p class="text-sm text-gray-600 mt-1">{item.excerpt}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </section>
+</Layout>
