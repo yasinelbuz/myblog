@@ -13,14 +13,12 @@ const response = await fetch(`https://api.raindrop.io/rest/v1/raindrops/${collec
 });
 
 const projects = await response.json();
-
-
 ---
 
 <Layout>
   <section>
     <h1>Keşfettiklerim ✨</h1>
-    <p class="mb-8 font-light">İnternette rastgeldiğim ve beğendiim linkleri listeliyorum.</p>
+    <p class="mb-8 font-light">İnternette rastgeldiğim ve beğendim linkleri listeliyorum.</p>
     {projects.result && projects.items.length > 0 && (
       <div>
         {/* Ayları grupla */}
