@@ -19,7 +19,7 @@ const projects = await response.json();
       <div>
         {/* Ayları grupla */}
         {Object.entries(
-          projects.items.reduce((acc, item) => {
+          projects.items.reduce((acc:any, item:any) => {
             const date = new Date(item.created);
             const monthYear = date.toLocaleString('tr-TR', { month: 'long', year: 'numeric' });
             if (!acc[monthYear]) acc[monthYear] = [];

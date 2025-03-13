@@ -16,7 +16,7 @@ const posts = (await getCollection('blog')).sort(
         <p class="mb-8 font-light">Merhaba 👋, Javascript dünyası ile ilgilenen, yazılım geliştiricisiyim. Okumayı, gezmeyi ve bisiklete binmeyi seviyorum.</p>
         <ul class="list-disc list-inside flex flex-col gap-2">
         {posts.map(item => {
-            return  <li class="text-black"><a href={`/blog/${item.slug}/`} class="hover:font-bold">{item.data.title}</a> <span class="text-sm text-black"><FormatDate class="text-black" date={item.data.pubDate}/></span></li>
+            return  <li class="text-black"><a href={`/blog/${item.slug}/`} class="hover:font-bold">{item.data.title}</a> <span class="text-sm text-black"><FormatDate date={item.data.pubDate}/></span></li>
         })}
         </ul>
     </div>
