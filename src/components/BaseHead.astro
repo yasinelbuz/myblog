@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-
 interface Props {
   image?: string;
 }
@@ -38,4 +36,3 @@ const { image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="twitter:title" content="Yasin Elbüz" />
 <meta property="twitter:description" content="Yasin Elbüz" />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
-<ViewTransitions />
