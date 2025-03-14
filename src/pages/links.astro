@@ -1,16 +1,18 @@
 ---
 import Layout from "../components/layout.astro";
 
+// SSR'ı aktif etmek için export config ekleyin
+export const prerender = false;
+
 const token = import.meta.env.RAINDROP_TOKEN;
 const collection_id = import.meta.env.RAINDROP_COLLECTION_ID;
-
 
 const response = await fetch(`https://api.raindrop.io/rest/v1/raindrops/${collection_id}`, {
   headers: {
     "Authorization": `Bearer ${token}`,
     "Content-Type": "application/json"
   },
-  "cache":"no-store"
+  method: "GET",
 });
 
 const projects = await response.json();
