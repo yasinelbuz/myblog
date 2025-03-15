@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../components/layout.astro";
+import FormatDate from "../components/FormattedDate.astro";
+import '../styles/tailwind.css';
+
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+---
+
+<Layout>
+    <div>
+        <p class="mb-8 font-light">Merhaba 👋, Javascript dünyası ile ilgilenen, yazılım geliştiricisiyim. Okumayı, gezmeyi ve bisiklete binmeyi seviyorum.</p>
+        <ul class="list-disc list-inside flex flex-col gap-2">
+        {posts.map(item => {
+            return  <li class="text-black"><a href={`/blog/${item.slug}/`} class="hover:font-bold">{item.data.title}</a> <span class="text-sm text-black"><FormatDate date={item.data.pubDate}/></span></li>
+        })}
+        </ul>
+    </div>
+</Layout>
