@@ -1,0 +1,16 @@
+---
+import "../styles/tailwind.css";
+import Header from "./Header.astro";
+import BaseHead from "./BaseHead.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <BaseHead />
+    <body>
+      <div class="w-full lg:w-1/2 md:w-2/3 mb-8 md:mb-20 md:m-auto px-4">
+            <Header />  
+            <slot />
+        </div>
+    </body>
+</html>

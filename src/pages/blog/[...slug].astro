@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../components/layout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'blog'>;
+
+const { slug } = Astro.params;
+const posts = await getCollection('blog');
+const post = posts.find((post): post is CollectionEntry<'blog'> => post.slug === slug);
+if (!post) throw new Error(`Post not found: ${slug}`);
+const { Content } = await post.render();
+---
+
+
+<Layout>
+	<div>
+		<h1 class="text-6xl leading-[140%]">{post.data.title}</h1>
+		<FormattedDate date={post.data.pubDate} />
+		<img src={post.data.heroImage} class="w-full my-8"/>
+		
+		<article class="leading-[200%]"><Content /></article>
+    </div>
+</Layout>
+

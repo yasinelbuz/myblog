@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    @apply text-black/80
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 28px;
+    @apply text-black/80
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.01rem;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white text-black/80 text-[16px]
+}
