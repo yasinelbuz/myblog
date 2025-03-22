@@ -1,5 +1,5 @@
 ---
-title: "Kendime Bir Kaç Not"
+title: "Satranç Öğreniyorum"
 description: ''
 pubDate: 'March, 25 2025'
 heroImage: ''
