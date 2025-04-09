@@ -1,7 +1,7 @@
 ---
 title: "Oyun yazma tutkusu"
 description: ''
-pubDate: 'Nisan, 09 2024'
+pubDate: 'April, 09 2025'
 heroImage: ''
 ---
 
