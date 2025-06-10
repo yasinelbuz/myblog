@@ -1,7 +1,7 @@
 ---
 title: "Vazgecmek"
 description: ""
-pubDate: "May, 11 2024"
+pubDate: "Jun, 11 2025"
 heroImage: ""
 ---
 
