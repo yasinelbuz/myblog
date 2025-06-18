@@ -1,5 +1,5 @@
 ---
-title: "Vazgecmek"
+title: "Vazgeçmek"
 description: ""
 pubDate: "Jun, 11 2025"
 heroImage: ""
