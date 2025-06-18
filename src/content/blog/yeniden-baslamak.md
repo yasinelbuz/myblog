@@ -1,30 +1,8 @@
 ---
-title: "yeniden başlamak"
-description: ''
-pubDate: 'April, 5 2025'
-heroImage: ''
+title: "Yeniden başlamak"
+description: ""
+pubDate: "April, 5 2025"
+heroImage: ""
 ---
 
-Allah yeniden başlayanların yardımcısıdır. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Allah yeniden başlayanların yardımcısıdır.
