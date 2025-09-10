@@ -1,16 +1,9 @@
 ---
-title: "Saat Gece 3 Olmuş"
+title: "Oyun yazma tutkusu"
 description: ''
-pubDate: 'Semptember, 10 2025'
+pubDate: 'April, 09 2025'
 heroImage: ''
 ---
 
-bu yazıyı yazarken saat gece 3:37 geçiyordu ve teoman'dan Saat 03:00 adlı şarkıyı dinliyorum ve şöyle diyor;
-
-<br />
-<br />
-
-Koşma yorulduysan
-Anaforda boğulduysan
-Sen de korkuyorsan
-Yalnızlıktan
+Yazılıma başladığım günden bu yana basit oyunlar geliştriyorum. Hatta o kadar basit oyunlar ki kimse oynamıyor :)
+neyse zaten birisi oynasın diye yazmıyorum bu bir tutku kimse görmese de yazardım.
