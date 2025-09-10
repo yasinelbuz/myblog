@@ -1,9 +1,13 @@
 ---
-title: "Oyun yazma tutkusu"
+title: "Gece Üç Olmuş"
 description: ''
-pubDate: 'April, 09 2025'
+pubDate: 'September, 10 2025'
 heroImage: ''
 ---
 
-Yazılıma başladığım günden bu yana basit oyunlar geliştriyorum. Hatta o kadar basit oyunlar ki kimse oynamıyor :)
-neyse zaten birisi oynasın diye yazmıyorum bu bir tutku kimse görmese de yazardım.
+Teoma'nın "Saat 03:00" adlı şarkısını dinlerken, saat gerçekten 3 olmuş, neyse şarkıda şöyle diyor; 
+
+Koşma yorulduysan
+Anaforda boğulduysan
+Sen de korkuyorsan
+Yalnızlıktan
